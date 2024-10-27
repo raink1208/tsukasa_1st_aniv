@@ -9,6 +9,7 @@ const {title, time, data, countUp} = defineProps<{
   time: number,
   data: Array<StreamInfo>,
   countUp: number,
+  select: string
 }>();
 
 const rankingList = ref<Element | undefined>();
@@ -51,7 +52,7 @@ onMounted(() => {
     <p class="time text-center">{{toHMSTime(animatedTime)}}</p>
     <div class="grid grid-nogutter" data-anim-slide="delayBottomIn" ref="delayFadeIn">
       <div v-for="streamInfo in data.slice(0, 5)" v-bind:key="streamInfo.id">
-        <RankingListItem :streamInfo="streamInfo" />
+        <RankingListItem :streamInfo="streamInfo" :select="select" />
       </div>
     </div>
   </div>

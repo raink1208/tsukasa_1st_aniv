@@ -16,7 +16,7 @@ const totalStreamTime = computed(() => {
 const totalLateTime = computed(() => {
   let totalLateTime = 0;
   lateTime.forEach((it: StreamInfo) => {
-    totalLateTime += it.lateTime
+    if (it.lateTime > 0) totalLateTime += it.lateTime
   });
   return totalLateTime;
 })
@@ -26,8 +26,8 @@ const totalLateTime = computed(() => {
   <header></header>
   <FadeInContainer>
     <div class="inner-wrapper">
-      <RankingListView title="年間配信時間合計" :time="totalStreamTime" :data="streamTime" class="fade-in" data-anim-slide="bottomIn" :countUp="4356" />
-      <RankingListView title="年間遅刻時間合計" :time="totalLateTime" :data="lateTime" class="fade-in" data-anim-slide="bottomIn" :countUp="214"/>
+      <RankingListView title="年間配信時間合計" :time="totalStreamTime" :data="streamTime" class="fade-in" data-anim-slide="bottomIn" :countUp="4356" select="streamTime" />
+      <RankingListView title="年間遅刻時間合計" :time="totalLateTime" :data="lateTime" class="fade-in" data-anim-slide="bottomIn" :countUp="214" select="lateTime" />
     </div>
   </FadeInContainer>
 </template>

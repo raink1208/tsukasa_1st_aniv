@@ -3,7 +3,8 @@ import type { StreamInfo } from '@/models/StreamInfo'
 import { toHMSTime } from '@/utils/TimeUtil'
 
 const {streamInfo} = defineProps<{
-  streamInfo: StreamInfo
+  streamInfo: StreamInfo,
+  select: string
 }>();
 </script>
 
@@ -15,7 +16,7 @@ const {streamInfo} = defineProps<{
       </div>
       <div class="relative flex-grow">
         <p>{{streamInfo.title}}</p>
-        <p class="absolute right-2 bottom-2">{{toHMSTime(streamInfo.streamTime)}}</p>
+        <p class="absolute right-2 bottom-2">{{toHMSTime(streamInfo[select])}}</p>
       </div>
     </div>
   </div>
