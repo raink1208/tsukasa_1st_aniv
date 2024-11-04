@@ -108,4 +108,28 @@ const fadeIn = () => {
 [data-anim-slide="delayBottomIn"].is-view > *:nth-child(5) {
   animation-delay: 0.8s;
 }
+
+[data-anim-slide="delayLeftIn"].is-view > * {
+  opacity: 0;
+  animation-name: anim-slide-leftIn;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  animation-fill-mode: forwards;
+}
+
+[data-anim-slide="delayLeftIn"].is-view > *:nth-child(1) {
+  animation-delay: 0s;
+}
+[data-anim-slide="delayLeftIn"].is-view > *:nth-child(2) {
+  animation-delay: 0.2s;
+}
+[data-anim-slide="delayLeftIn"].is-view > *:nth-child(3) {
+  animation-delay: 0.4s;
+}
+[data-anim-slide="delayLeftIn"].is-view > *:nth-child(4) {
+  animation-delay: 0.6s;
+}
+[data-anim-slide="delayLeftIn"].is-view > *:nth-child(5) {
+  animation-delay: 0.8s;
+}
 </style>

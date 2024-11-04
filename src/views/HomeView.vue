@@ -5,6 +5,8 @@ import lateTime from '@/assets/data/lateTime.json'
 import { computed } from 'vue'
 import type { StreamInfo } from '@/models/StreamInfo'
 import FadeInContainer from '@/components/FadeInContainer.vue'
+import ProfileArea from '@/components/ProfileArea.vue'
+import HistoryArea from '@/components/HistoryArea.vue'
 
 const totalStreamTime = computed(() => {
   let totalTime = 0;
@@ -23,20 +25,17 @@ const totalLateTime = computed(() => {
 </script>
 
 <template>
-  <header></header>
   <FadeInContainer>
+    <ProfileArea />
+    <HistoryArea />
     <div class="inner-wrapper">
-      <RankingListView title="年間配信時間合計" :time="totalStreamTime" :data="streamTime" class="fade-in" data-anim-slide="bottomIn" :countUp="4356" select="streamTime" />
-      <RankingListView title="年間遅刻時間合計" :time="totalLateTime" :data="lateTime" class="fade-in" data-anim-slide="bottomIn" :countUp="214" select="lateTime" />
+      <RankingListView title="年間配信時間合計" :time="totalStreamTime" :data="streamTime" class="fade-in" data-anim-slide="bottomIn" :countUp="4357" select="streamTime" />
+      <RankingListView title="年間遅刻時間合計" :time="totalLateTime" :data="lateTime" class="fade-in" data-anim-slide="bottomIn" :countUp="235" select="lateTime" />
     </div>
   </FadeInContainer>
 </template>
 
 <style scoped>
-header{
-  height: 200vh;
-}
-
 .inner-wrapper {
   max-width: 1280px;
   padding-left: 4em;
