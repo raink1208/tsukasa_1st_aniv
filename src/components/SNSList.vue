@@ -1,10 +1,10 @@
 <script setup lang="ts">
 
-import twitterLogo from '@/assets/img/logo/sns/x-twitter_logo.webp'
-import youtubeLogo from '@/assets/img/logo/sns/youtube_logo.webp'
-import twitchLogo from '@/assets/img/logo/sns/twitch_logo.webp'
-import marshmallowLogo from '@/assets/img/logo/sns/marshmallow.webp'
-import specialiteLogo from '@/assets/img/logo/sns/specialite_logo.webp'
+import twitterLogo from '@/assets/img/icons/x-twitter_logo.webp'
+import youtubeLogo from '@/assets/img/icons/youtube_logo.webp'
+import twitchLogo from '@/assets/img/icons/twitch_logo.webp'
+import marshmallowLogo from '@/assets/img/icons/marshmallow.webp'
+import specialiteLogo from '@/assets/img/icons/specialite_logo.webp'
 </script>
 
 <template>
@@ -22,13 +22,13 @@ import specialiteLogo from '@/assets/img/logo/sns/specialite_logo.webp'
           <span>tsukasa_ryogoku(YouTube)</span>
         </a>
       </li>
-      <li class="twitch" style="padding-top: 2px;">
+      <li class="twitch">
         <a href="https://www.twitch.tv/tsukasa_ryogoku" target="_blank">
           <img :src="twitchLogo" alt="twitch-icon">
           <span>tsukasa_ryogoku(Twitch)</span>
         </a>
       </li>
-      <li style="padding-top: 3px;">
+      <li>
         <a href="https://marshmallow-qa.com/ss7bun5g8x1iwlg" target="_blank">
           <img :src="marshmallowLogo" alt="marshmallow">
           <span>ましゅまろ</span>
