@@ -46,7 +46,7 @@ import specialiteLogo from '@/assets/img/icons/specialite_logo.webp'
 
 <style scoped>
 .sns {
-  margin-top: 50px;
+  margin-top: 30px;
   margin-left: 10px;
 }
 
