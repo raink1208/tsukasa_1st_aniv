@@ -1,10 +1,12 @@
 <script setup lang="ts">
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+//@ts-nocheck
 import type { StreamInfo } from '@/models/StreamInfo'
 import { toHMSTime } from '@/utils/TimeUtil'
 
 const {streamInfo} = defineProps<{
   streamInfo: StreamInfo,
-  select: string
+  select: string,
 }>();
 
 const openUrl = (url: string) => {

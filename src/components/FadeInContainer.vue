@@ -9,6 +9,7 @@ onMounted(() => {
 });
 
 const fadeIn = () => {
+  if (!animationContainer.value) return;
   const items = animationContainer.value.querySelectorAll(".fade-in") ?? [];
   items.forEach((item: Element) => {
     const top = item.getBoundingClientRect().top;

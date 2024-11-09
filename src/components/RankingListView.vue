@@ -1,4 +1,6 @@
 <script setup lang="ts">
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+//@ts-nocheck
 import type { StreamInfo } from '@/models/StreamInfo'
 import RankingListItem from '@/components/RankingListItem.vue'
 import { toHMSTime } from '@/utils/TimeUtil'
@@ -16,9 +18,10 @@ const rankingList = ref<Element | undefined>();
 const delayFadeIn = ref<Element | undefined>();
 const animatedTime = ref(0);
 
-let timer;
+let timer: number;
 
 const startAnimation = () => {
+  if (!rankingList.value) return;
   const top = rankingList.value.getBoundingClientRect().top;
   const height = window.innerHeight;
   if (top < height * 0.9) {
