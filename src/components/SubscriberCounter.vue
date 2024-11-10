@@ -34,7 +34,7 @@ watch(props, () => {
 
 <template>
   <div>
-    <p>チャンネル登録者数</p>
+    <p>登録者数</p>
     <h2>{{ displayCount }}</h2>
   </div>
 </template>

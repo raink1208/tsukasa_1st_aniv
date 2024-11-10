@@ -32,6 +32,8 @@ import SNSList from '@/components/SNSList.vue'
 <style scoped>
 #profile {
   margin: auto auto;
+  padding-top: 40px;
+  padding-bottom: 50px;
 }
 
 .title-logo {
