@@ -11,7 +11,7 @@ import type { HistoryItem } from '@/models/HistoryItem'
 
 const convertToIso8601 = (dateStr: string): string => {
   const [year, month, day] = dateStr.split('/');
-  const date = new Date(Date.UTC(year, month, day));
+  const date = new Date(Date.UTC(Number(year), Number(month), Number(day)));
   date.setDate(date.getDate() + 1);
   const yearStr = date.getUTCFullYear().toString().padStart(4, '0');
   const monthStr = date.getUTCMonth().toString().padStart(2, '0');
