@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import profileLogo from '@/assets/img/logo/profile_logo.webp';
 import standPicture from '@/assets/img/stand/tsukasa.webp';
-import SNSList from '@/components/SNSList.vue'
+import SNSList from '@/components/profile/SNSList.vue'
 </script>
 
 <template>
