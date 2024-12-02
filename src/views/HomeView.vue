@@ -8,6 +8,8 @@ import FadeInContainer from '@/components/FadeInContainer.vue'
 import ProfileArea from '@/components/profile/ProfileArea.vue'
 import HistoryArea from '@/components/history/HistoryArea.vue'
 import LoadingTransition from '@/components/LoadingTransition.vue'
+import CharmPointArea from '@/components/charm/CharmPointArea.vue'
+import FirstViewArea from '@/components/firstView/FirstViewArea.vue'
 
 const totalStreamTime = computed(() => {
   let totalTime = 0;
@@ -22,7 +24,7 @@ const totalLateTime = computed(() => {
     if (it.lateTime > 0) totalLateTime += it.lateTime
   });
   return totalLateTime;
-})
+});
 
 const loading = ref(true);
 onMounted(() => {
@@ -39,7 +41,9 @@ onMounted(() => {
   </transition>
   <div v-if="!loading">
     <FadeInContainer>
+      <FirstViewArea />
       <ProfileArea />
+      <CharmPointArea />
       <HistoryArea />
       <div class="inner-wrapper">
         <RankingListView title="年間配信時間合計" :totalTime="totalStreamTime" :data="streamTime" class="fade-in" data-anim-slide="bottomIn" select="streamTime" />

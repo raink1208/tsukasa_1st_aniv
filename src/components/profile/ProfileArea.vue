@@ -2,11 +2,14 @@
 import profileLogo from '@/assets/img/logo/profile_logo.webp';
 import standPicture from '@/assets/img/stand/tsukasa.webp';
 import SNSList from '@/components/profile/SNSList.vue'
+import IntroductionArea from '@/components/profile/IntroductionArea.vue'
 </script>
 
 <template>
   <section id="profile">
-    <img class="title-logo fade-in" :src="profileLogo"  alt="" data-anim-slide="bottomIn" />
+    <h2>
+      <img class="title-logo fade-in" :src="profileLogo"  alt="プロフィール profile" data-anim-slide="bottomIn" />
+    </h2>
     <div class="inner-wrapper">
       <div class="profile-row">
         <div class="stand-picture">
@@ -14,7 +17,7 @@ import SNSList from '@/components/profile/SNSList.vue'
         </div>
         <div class="profile-intro">
           <div class="name fade-in" data-anim-slide="leftIn">
-            <h2>領国つかさ</h2>
+            <h3>領国つかさ</h3>
             <small>Tsukasa Ryogoku</small>
           </div>
           <div class="intro fade-in" data-anim-slide="leftIn">
@@ -26,6 +29,7 @@ import SNSList from '@/components/profile/SNSList.vue'
         </div>
       </div>
     </div>
+    <introductionArea />
   </section>
 </template>
 
@@ -76,8 +80,8 @@ import SNSList from '@/components/profile/SNSList.vue'
   margin-bottom: 30px;
 }
 
-.profile-intro .name h2 {
-  font-family: var(--font-round);
+.profile-intro .name h3 {
+  font-family: var(--font-round), serif;
   font-size: 40px;
   line-height: 40px;
 }

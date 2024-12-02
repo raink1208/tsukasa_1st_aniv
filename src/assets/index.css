@@ -5,4 +5,12 @@
 :root {
     --font-jp: "Open Sans", "Helvetica Neue", arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", meiryo, sans-serif;
     --font-round: "ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+
+    --accent-color: rgb(185, 46, 70);
+    --accent-color-alpha: rgba(185, 46, 70, 0.5);
+    --light-accent-color: #fd838d;
+}
+
+body {
+    font-family: var(--font-jp), serif;
 }
