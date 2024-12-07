@@ -82,7 +82,7 @@
 </template>
 
 <style scoped>
-h3 {
+h4 {
   font-size: 30px;
   font-family: var(--font-round),serif;
 }
