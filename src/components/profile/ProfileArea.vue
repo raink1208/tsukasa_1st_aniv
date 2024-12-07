@@ -3,6 +3,7 @@ import profileLogo from '@/assets/img/logo/profile_logo.webp';
 import standPicture from '@/assets/img/stand/tsukasa.webp';
 import SNSList from '@/components/profile/SNSList.vue'
 import IntroductionArea from '@/components/profile/IntroductionArea.vue'
+import ProfileImageSwiper from '@/components/profile/ProfileImageSwiper.vue'
 </script>
 
 <template>
@@ -26,6 +27,7 @@ import IntroductionArea from '@/components/profile/IntroductionArea.vue'
             </p>
           </div>
           <SNSList />
+          <ProfileImageSwiper />
         </div>
       </div>
     </div>
@@ -51,7 +53,7 @@ import IntroductionArea from '@/components/profile/IntroductionArea.vue'
 .inner-wrapper {
   margin: 0 auto;
   padding: 0 4em;
-  max-width: 1280px;
+  max-width: 1480px;
 }
 
 .profile-row {
