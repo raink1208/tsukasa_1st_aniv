@@ -9,8 +9,9 @@
     --accent-color: rgb(185, 46, 70);
     --accent-color-alpha: rgba(185, 46, 70, 0.5);
     --light-accent-color: #fd838d;
+    --theme-color: #b92e46;
 
-    --swiper-theme-color: #b92e46 !important;
+    --swiper-theme-color: var(--theme-color) !important;
 }
 
 body {
