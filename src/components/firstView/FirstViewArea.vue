@@ -5,7 +5,7 @@
 <template>
   <section id="firstView">
     <div class="background">
-      <video src="@/assets/videos/催眠術.mov" autoplay muted />
+      <video autoplay muted loop />
     </div>
     <div class="bg-mask">
       <div class="center">
