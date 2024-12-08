@@ -104,5 +104,9 @@ import ProfileImageSwiper from '@/components/profile/ProfileImageSwiper.vue'
   .profile-intro {
     width: revert;
   }
+
+  .inner-wrapper {
+    padding: 0 1em;
+  }
 }
 </style>
