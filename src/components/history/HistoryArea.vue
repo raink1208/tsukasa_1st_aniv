@@ -5,22 +5,22 @@ import historyLogo from '@/assets/img/logo/history_logo.webp'
 
 <template>
   <section id="history">
+    <img class="title-logo fade-in" :src="historyLogo" alt="" data-anim-slide="bottomIn" />
     <div class="inner-wrapper">
-      <img class="title-logo fade-in" :src="historyLogo" alt="" data-anim-slide="bottomIn" />
-      <div class="history-tab">
-        <div>
+      <ul class="history-tabs">
+        <li class="history-tab">
           <p>1月~3月</p>
-        </div>
-        <div>
+        </li>
+        <li class="history-tab">
           <p>4月~6月</p>
-        </div>
-        <div>
+        </li>
+        <li class="history-tab">
           <p>7月~9月</p>
-        </div>
-        <div>
+        </li>
+        <li class="history-tab active">
           <p>10月~12月</p>
-        </div>
-      </div>
+        </li>
+      </ul>
     </div>
   </section>
 </template>
@@ -46,16 +46,17 @@ import historyLogo from '@/assets/img/logo/history_logo.webp'
   margin: 0 auto 40px;
 }
 
-.history-tab {
-  padding-top: 50px;
+.history-tabs {
   display: flex;
   justify-content: center;
   gap: 50px;
 }
 
-.history-tab div {
-  width: 130px;
-  padding: 8px 0;
+.history-tabs .history-tab p {
+  position: relative;
+  max-width: 150px;
+  min-width: 80px;
+  display: block;
   border: 1px solid var(--theme-color);
   border-radius: 20px;
   text-align: center;
