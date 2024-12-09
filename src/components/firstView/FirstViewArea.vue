@@ -9,7 +9,7 @@
     </div>
     <div class="bg-mask">
       <div class="center">
-        <h1 class="fade-in" data-anim-slide="bottomIn">領国つかさ 1周年記念サイト</h1>
+        <h1 class="fade-in" data-anim-slide="bottomIn"><span>領国つかさ</span> <span>1周年記念サイト</span></h1>
       </div>
     </div>
   </section>
@@ -46,6 +46,10 @@ h1 {
   color: #fff;
   text-align: center;
 
+}
+
+h1 span {
+  display: inline-block;
 }
 
 .background video {
