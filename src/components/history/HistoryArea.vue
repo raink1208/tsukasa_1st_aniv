@@ -41,6 +41,7 @@ import historyLogo from '@/assets/img/logo/history_logo.webp'
 .title-logo {
   max-height: 130px;
   max-width: 350px;
+  min-width: 90vw;
   width: auto;
   display: block;
   margin: 0 auto 40px;

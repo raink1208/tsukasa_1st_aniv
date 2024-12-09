@@ -17,3 +17,8 @@
 body {
     font-family: var(--font-jp), serif;
 }
+
+img {
+    width: 100%;
+    height: auto;
+}

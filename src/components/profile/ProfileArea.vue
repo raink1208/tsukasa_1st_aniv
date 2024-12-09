@@ -45,6 +45,7 @@ import ProfileImageSwiper from '@/components/profile/ProfileImageSwiper.vue'
 .title-logo {
   max-height: 130px;
   max-width: 350px;
+  min-width: 90vw;
   width: auto;
   display: block;
   margin: 0 auto;
@@ -92,7 +93,7 @@ import ProfileImageSwiper from '@/components/profile/ProfileImageSwiper.vue'
   font-size: 14px;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 768px) {
   .profile-row {
     display: revert;
   }
