@@ -5,11 +5,11 @@
 <template>
   <section id="firstView">
     <div class="background">
-      <video autoplay muted loop />
+      <video src="https://1staniv-cdn.tsukasa-kingdom.net/first_view.mp4" autoplay muted loop />
     </div>
     <div class="bg-mask">
       <div class="center">
-        <h1 class="fade-in" data-anim-slide="bottomIn"><span>領国つかさ</span> <span>1周年記念サイト</span></h1>
+<!--        <h1 class="fade-in" data-anim-slide="bottomIn"><span>領国つかさ</span> <span>1周年記念サイト</span></h1>-->
       </div>
     </div>
   </section>
