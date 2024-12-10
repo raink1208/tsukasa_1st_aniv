@@ -4,11 +4,14 @@ import "swiper/swiper-bundle.css"
 import {Pagination, Autoplay, EffectFade } from 'swiper/modules'
 
 const images = [
-  "https://1staniv-cdn.tsukasa-kingdom.net/profile_slide_002.png",
-  "https://1staniv-cdn.tsukasa-kingdom.net/profile_slide_005.png",
-  "https://1staniv-cdn.tsukasa-kingdom.net/profile_slide_006.png",
-  "https://1staniv-cdn.tsukasa-kingdom.net/profile_slide_003.png",
-  "https://1staniv-cdn.tsukasa-kingdom.net/profile_slide_007.png",
+  "https://1staniv-cdn.tsukasa-kingdom.net/profile_slide/first_stream_face.webp",
+  "https://1staniv-cdn.tsukasa-kingdom.net/profile_slide/first_stream_charm.webp",
+  "https://1staniv-cdn.tsukasa-kingdom.net/profile_slide/first_stream_guruguru.webp",
+  "https://1staniv-cdn.tsukasa-kingdom.net/profile_slide/school_outfit_face.webp",
+  "https://1staniv-cdn.tsukasa-kingdom.net/profile_slide/school_outfit_smile.webp",
+  "https://1staniv-cdn.tsukasa-kingdom.net/profile_slide/3D_hypnosis.webp",
+  "https://1staniv-cdn.tsukasa-kingdom.net/profile_slide/3D_chair.webp",
+  "https://1staniv-cdn.tsukasa-kingdom.net/profile_slide/3D_weapon.webp",
 ]
 </script>
 
