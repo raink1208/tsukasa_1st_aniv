@@ -39,15 +39,10 @@ import ProfileImageSwiper from '@/components/profile/ProfileImageSwiper.vue'
 #profile {
   margin: auto auto;
   padding-top: 40px;
-  padding-bottom: 50px;
 }
 
 .title-logo {
-  max-height: 130px;
-  max-width: 350px;
-  min-width: 90vw;
-  width: auto;
-  display: block;
+  width: 400px;
   margin: 0 auto;
 }
 

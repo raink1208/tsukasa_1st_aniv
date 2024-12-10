@@ -28,8 +28,8 @@ import historyLogo from '@/assets/img/logo/history_logo.webp'
 <style scoped>
 #history {
   padding-top: 30px;
-  padding-bottom: 40px;
 }
+
 .inner-wrapper {
   max-width: 1380px;
   padding-left: 1.5em;
@@ -38,13 +38,10 @@ import historyLogo from '@/assets/img/logo/history_logo.webp'
   margin-left: auto;
   margin-right: auto;
 }
+
 .title-logo {
-  max-height: 130px;
-  max-width: 350px;
-  min-width: 90vw;
-  width: auto;
-  display: block;
-  margin: 0 auto 40px;
+  width: 400px;
+  margin: 0 auto;
 }
 
 .history-tabs {
