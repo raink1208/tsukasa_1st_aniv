@@ -77,32 +77,17 @@ const getHistories = (select: number): HistoryItem[] => {
   position: absolute;
   margin: auto;
   right: 0;
-  bottom: 100%;
+  bottom: 60%;
   left: 0;
   width: 70px;
   height: 70px;
   content: '';
+  background-image: url(@/assets/img/stand/tsukasaSD.webp);
   background-position: center top;
   background-size: 100%;
   background-repeat: no-repeat;
   opacity: 0;
   transition: opacity 1s;
-}
-
-.history-tab:nth-child(1) p::before {
-  background-image: url();
-}
-
-.history-tab:nth-child(2) p::before {
-  background-image: url();
-}
-
-.history-tab:nth-child(3) p::before {
-  background-image: url();
-}
-
-.history-tab:nth-child(4) p::before {
-  background-image: url();
 }
 
 .history-tabs .history-tab.select p::before {
