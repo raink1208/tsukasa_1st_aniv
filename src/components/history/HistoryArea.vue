@@ -59,7 +59,7 @@ const getHistories = (select: number): HistoryItem[] => {
   width: 150px;
   padding: 8px 0;
   display: block;
-  border: 1px solid var(--theme-color);
+  border: 2px solid var(--theme-color);
   border-radius: 20px;
   text-align: center;
   font-weight: bold;
