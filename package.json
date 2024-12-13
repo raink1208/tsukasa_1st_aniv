@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "destyle.css": "^4.0.1",
+    "hls.js": "^1.5.17",
     "pinia": "^2.2.4",
     "swiper": "^11.1.15",
     "vue": "^3.5.12",
