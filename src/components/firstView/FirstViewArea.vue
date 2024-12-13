@@ -53,7 +53,7 @@ onBeforeUnmount(() => {
   width: -webkit-fill-available;
   width: -moz-available;
   width: stretch;
-  height: 100vh;
+  height: 100dvh;
 }
 
 .bg-mask {
