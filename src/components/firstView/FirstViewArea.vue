@@ -1,11 +1,44 @@
 <script setup lang="ts">
+import Hls from 'hls.js'
+import { onMounted, onBeforeUnmount, ref } from 'vue'
 
+const playlistURL = "https://1staniv-cdn.tsukasa-kingdom.net/first_view_hls/first_view.m3u8";
+const videoRef = ref<HTMLVideoElement | null>(null);
+let hls: Hls | null = null;
+
+onMounted(() => {
+  const video = videoRef.value;
+  if (!video) return;
+
+  if (Hls.isSupported()) {
+    hls = new Hls();
+    hls.loadSource(playlistURL);
+    hls.attachMedia(video);
+    video.play().catch((error) => {
+      console.error("Error playing video:", error);
+    });
+  } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
+    video.src = playlistURL;
+    video.addEventListener("canplay", () => {
+      video.play().catch((error) => {
+        console.error("Error playing video:", error);
+      });
+    });
+  }
+});
+
+onBeforeUnmount(() => {
+  if (hls) {
+    hls.destroy();
+    hls = null;
+  }
+});
 </script>
 
 <template>
   <section id="firstView">
     <div class="background">
-      <video src="https://1staniv-cdn.tsukasa-kingdom.net/first_view.mp4" autoplay muted loop />
+      <video ref="videoRef" autoplay muted loop playsinline />
     </div>
     <div class="bg-mask">
       <div class="center">
