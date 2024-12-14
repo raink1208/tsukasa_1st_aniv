@@ -7,7 +7,6 @@ import type { StreamInfo } from '@/models/StreamInfo'
 import FadeInContainer from '@/components/FadeInContainer.vue'
 import ProfileArea from '@/components/profile/ProfileArea.vue'
 import HistoryArea from '@/components/history/HistoryArea.vue'
-import LoadingTransition from '@/components/LoadingTransition.vue'
 import CharmPointArea from '@/components/charm/CharmPointArea.vue'
 import FirstViewArea from '@/components/firstView/FirstViewArea.vue'
 
@@ -25,32 +24,19 @@ const totalLateTime = computed(() => {
   });
   return totalLateTime;
 });
-
-const loading = ref(true);
-onMounted(() => {
-  setTimeout(() => {
-    loading.value = false;
-  }, 3000);
-});
-
 </script>
 
 <template>
-  <transition name="fade">
-    <LoadingTransition v-if="loading"/>
-  </transition>
-  <div v-if="!loading">
-    <FadeInContainer>
-      <FirstViewArea />
-      <ProfileArea />
-      <CharmPointArea />
-      <HistoryArea />
-      <div class="inner-wrapper">
-        <RankingListView title="年間配信時間合計" :totalTime="totalStreamTime" :data="streamTime" class="fade-in" data-anim-slide="bottomIn" select="streamTime" />
-        <RankingListView title="年間遅刻時間合計" :totalTime="totalLateTime" :data="lateTime" class="fade-in" data-anim-slide="bottomIn" select="lateTime" />
-      </div>
-    </FadeInContainer>
-  </div>
+  <FadeInContainer>
+    <FirstViewArea />
+    <ProfileArea />
+    <CharmPointArea />
+    <HistoryArea />
+    <div class="inner-wrapper">
+      <RankingListView title="年間配信時間合計" :totalTime="totalStreamTime" :data="streamTime" class="fade-in" data-anim-slide="bottomIn" select="streamTime" />
+      <RankingListView title="年間遅刻時間合計" :totalTime="totalLateTime" :data="lateTime" class="fade-in" data-anim-slide="bottomIn" select="lateTime" />
+    </div>
+  </FadeInContainer>
 </template>
 
 <style scoped>
@@ -61,12 +47,5 @@ onMounted(() => {
 
   margin-left: auto;
   margin-right: auto;
-}
-
-.fade-enter-active, .fade-leave-active {
-  transition: opacity 1.5s ease;
-}
-.fade-enter, .fade-leave-to {
-  opacity: 0;
 }
 </style>
