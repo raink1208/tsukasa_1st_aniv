@@ -16,7 +16,7 @@
             </div>
           </div>
           <div class="video-wrapper">
-            <video src="/src/assets/videos/first_view.mp4" />
+            <video />
           </div>
         </div>
       </div>
@@ -25,7 +25,7 @@
         <div class="intro">
           <div class="intro-video">
             <div class="video-wrapper">
-              <video src="/src/assets/videos/first_view.mp4" />
+              <video />
             </div>
           </div>
           <div class="intro-body">
@@ -51,7 +51,7 @@
           </div>
           <div class="intro-video">
             <div class="video-wrapper">
-              <video src="/src/assets/videos/first_view.mp4" />
+              <video />
             </div>
           </div>
         </div>
