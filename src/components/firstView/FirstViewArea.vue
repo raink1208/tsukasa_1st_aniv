@@ -7,8 +7,12 @@ const videoRef = ref<HTMLVideoElement | null>(null);
 let hls: Hls | null = null;
 
 onMounted(() => {
-  const video = videoRef.value;
-  if (!video) return;
+  setTimeout(() => {
+    isAnimated.value = true;
+  }, 500)
+
+  const video = videoRef.value
+  if (!video) return
 
   if (Hls.isSupported()) {
     hls = new Hls();
@@ -33,6 +37,10 @@ onBeforeUnmount(() => {
     hls = null;
   }
 });
+
+const message = '「領国つかさ、１周年おめでとう！」'
+const isAnimated = ref(false)
+
 </script>
 
 <template>
@@ -42,7 +50,15 @@ onBeforeUnmount(() => {
     </div>
     <div class="bg-mask">
       <div class="center">
-<!--        <h1 class="fade-in" data-anim-slide="bottomIn"><span>領国つかさ</span> <span>1周年記念サイト</span></h1>-->
+        <div :class="['animate-message', { animated: isAnimated }]">
+          <span
+            v-for="(c, index) in message"
+            :key="index"
+            :style="{ transitionDelay: `${index * 0.05}s` }"
+          >
+            {{ c }}
+          </span>
+        </div>
       </div>
     </div>
   </section>
@@ -89,5 +105,25 @@ h1 span {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.animate-message {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.animate-message span {
+  display: inline-block;
+  opacity: 0;
+  filter: blur(10px);
+  transform: translate(-100%, -100%) scale(2);
+}
+
+.animate-message.animated span {
+  opacity: 1;
+  filter: blur(0px);
+  transform: translate(0%, 0%) scale(1);
+  transition: 1.2s cubic-bezier(0.22, 1, 0.36, 1);
 }
 </style>

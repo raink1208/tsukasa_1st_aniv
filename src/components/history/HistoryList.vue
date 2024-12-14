@@ -4,7 +4,7 @@ import HistoryListItem from '@/components/history/HistoryListItem.vue'
 
 const { histories } = defineProps<{
   histories: HistoryItem[]
-}>();
+}>()
 </script>
 
 <template>
@@ -13,6 +13,4 @@ const { histories } = defineProps<{
   </div>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

@@ -1,30 +1,35 @@
 <script setup lang="ts">
 import historyData from '@/assets/data/historyItems.json'
 import historyLogo from '@/assets/img/logo/history_logo.webp'
-import { ref } from 'vue';
-import type { HistoryItem } from '@/models/HistoryItem';
+import { ref } from 'vue'
+import type { HistoryItem } from '@/models/HistoryItem'
 import HistoryList from '@/components/history/HistoryList.vue'
-const selectTab = ref<number>(0);
+const selectTab = ref<number>(0)
 const getHistories = (select: number): HistoryItem[] => {
-  return historyData[select];
+  return historyData[select]
 }
 </script>
 
 <template>
   <section id="history">
-    <img class="title-logo fade-in" :src="historyLogo" alt="" data-anim-slide="bottomIn" />
+    <img
+      class="title-logo fade-in"
+      :src="historyLogo"
+      alt=""
+      data-anim-slide="bottomIn"
+    />
     <div class="inner-wrapper">
       <ul class="history-tabs">
-        <li class="history-tab" :class="{'select': selectTab == 0}">
+        <li class="history-tab" :class="{ select: selectTab == 0 }">
           <p @click="selectTab = 0">1月~3月</p>
         </li>
-        <li class="history-tab" :class="{'select': selectTab == 1}">
+        <li class="history-tab" :class="{ select: selectTab == 1 }">
           <p @click="selectTab = 1">4月~6月</p>
         </li>
-        <li class="history-tab" :class="{'select': selectTab == 2}">
+        <li class="history-tab" :class="{ select: selectTab == 2 }">
           <p @click="selectTab = 2">7月~9月</p>
         </li>
-        <li class="history-tab" :class="{'select': selectTab == 3}">
+        <li class="history-tab" :class="{ select: selectTab == 3 }">
           <p @click="selectTab = 3">10月~12月</p>
         </li>
       </ul>
@@ -93,5 +98,4 @@ const getHistories = (select: number): HistoryItem[] => {
 .history-tabs .history-tab.select p::before {
   opacity: 1;
 }
-
 </style>
