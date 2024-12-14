@@ -6,6 +6,7 @@ const { history } = defineProps<{
 }>()
 
 const getThumbnailPath = (fileName: string) => {
+  return fileName;
   //return "/src/assets/img/history/" + fileName;
 }
 </script>
