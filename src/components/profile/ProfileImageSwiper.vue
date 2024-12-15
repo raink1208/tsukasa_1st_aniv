@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { Swiper, SwiperSlide } from 'swiper/vue'
-import "swiper/swiper-bundle.css"
 import {Pagination, Autoplay, EffectFade } from 'swiper/modules'
 
 const images = [

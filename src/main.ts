@@ -1,4 +1,5 @@
 import 'destyle.css';
+import 'swiper/swiper-bundle.css';
 import '@/assets/index.css';
 
 import { createApp } from 'vue';
