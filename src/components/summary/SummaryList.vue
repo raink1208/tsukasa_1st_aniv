@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { StreamInfo } from '@/models/StreamInfo'
-import RankingListItem from '@/components/ranking/RankingListItem.vue'
+import SummaryListItem from '@/components/summary/SummaryListItem.vue'
 import { toHMSTime } from '@/utils/TimeUtil'
 import { onMounted, ref } from 'vue'
 
@@ -54,10 +54,11 @@ onMounted(() => {
 <template>
   <div ref="rankingList">
     <h3 class="title text-center">{{title}}</h3>
+    <slot name="description"></slot>
     <p class="time text-center">{{toHMSTime(displayTime)}}</p>
     <div class="grid grid-nogutter" data-anim-slide="delayBottomIn" ref="delayFadeIn">
       <div v-for="streamInfo in data.slice(0, 5)" v-bind:key="streamInfo.id">
-        <RankingListItem :streamInfo="streamInfo" :select="select" />
+        <SummaryListItem :streamInfo="streamInfo" :select="select" />
       </div>
     </div>
   </div>
