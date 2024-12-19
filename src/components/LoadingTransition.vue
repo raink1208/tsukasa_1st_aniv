@@ -1,23 +1,8 @@
 <script setup lang="ts">
-import { ref, onMounted } from "vue";
-
-const message = "「領国つかさ、１周年おめでとう！」";
-const isAnimated = ref(false);
-
-onMounted(() => {
-  setTimeout(() => {
-    isAnimated.value = true;
-  }, 500);
-});
 </script>
 
 <template>
   <div class="transition">
-    <div :class="['animate-message', { animated: isAnimated }]">
-      <span v-for="(c, index) in message" :key="index" :style="{ transitionDelay: `${index * 0.05}s` }">
-        {{ c }}
-      </span>
-    </div>
   </div>
 </template>
 
