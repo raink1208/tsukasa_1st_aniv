@@ -3,7 +3,19 @@ import profileLogo from '@/assets/img/logo/profile_logo.webp';
 import standPicture from '@/assets/img/stand/tsukasa.webp';
 import SNSList from '@/components/profile/SNSList.vue'
 import IntroductionArea from '@/components/profile/IntroductionArea.vue'
-import ProfileImageSwiper from '@/components/profile/ProfileImageSwiper.vue'
+import ImageSwiperSlide from '@/components/ImageSwiperSlide.vue'
+
+const images = [
+  "https://1staniv-cdn.tsukasa-kingdom.net/profile_slide/first_stream_face.webp",
+  "https://1staniv-cdn.tsukasa-kingdom.net/profile_slide/first_stream_charm.webp",
+  "https://1staniv-cdn.tsukasa-kingdom.net/profile_slide/first_stream_guruguru.webp",
+  "https://1staniv-cdn.tsukasa-kingdom.net/profile_slide/school_outfit_face.webp",
+  "https://1staniv-cdn.tsukasa-kingdom.net/profile_slide/school_outfit_smile.webp",
+  "https://1staniv-cdn.tsukasa-kingdom.net/profile_slide/3D_hypnosis.webp",
+  "https://1staniv-cdn.tsukasa-kingdom.net/profile_slide/3D_chair.webp",
+  "https://1staniv-cdn.tsukasa-kingdom.net/profile_slide/3D_weapon.webp",
+]
+
 </script>
 
 <template>
@@ -27,7 +39,7 @@ import ProfileImageSwiper from '@/components/profile/ProfileImageSwiper.vue'
             </p>
           </div>
           <SNSList />
-          <ProfileImageSwiper />
+          <ImageSwiperSlide :images="images" class="fade-in" data-anim-slide="leftIn" />
         </div>
       </div>
     </div>
