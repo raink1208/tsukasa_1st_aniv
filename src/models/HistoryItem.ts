@@ -1,5 +1,6 @@
 export interface HistoryItem {
   title: string,
   thumbnail: string,
-  date: string
+  date: string,
+  url: string,
 }

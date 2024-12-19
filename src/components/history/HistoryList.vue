@@ -8,9 +8,19 @@ const { histories } = defineProps<{
 </script>
 
 <template>
-  <div v-for="history in histories">
-    <HistoryListItem :history="history" />
-  </div>
+  <ul class="history-list fade-in" data-anim-slide="bottomIn">
+    <li v-for="history in histories" v-bind:key="history.title">
+      <HistoryListItem :history="history" />
+    </li>
+  </ul>
 </template>
 
-<style scoped></style>
+<style scoped>
+.history-list li {
+  border-bottom: 2px dashed var(--accent-color-alpha);
+
+  padding-top: 1.5em;
+  padding-bottom: 1em;
+}
+
+</style>

@@ -18,21 +18,21 @@ const getHistories = (select: number): HistoryItem[] => {
       alt=""
       data-anim-slide="bottomIn"
     />
+    <ul class="history-tabs">
+      <li class="history-tab" :class="{ select: selectTab == 0 }">
+        <p @click="selectTab = 0">1月~3月</p>
+      </li>
+      <li class="history-tab" :class="{ select: selectTab == 1 }">
+        <p @click="selectTab = 1">4月~6月</p>
+      </li>
+      <li class="history-tab" :class="{ select: selectTab == 2 }">
+        <p @click="selectTab = 2">7月~9月</p>
+      </li>
+      <li class="history-tab" :class="{ select: selectTab == 3 }">
+        <p @click="selectTab = 3">10月~12月</p>
+      </li>
+    </ul>
     <div class="inner-wrapper">
-      <ul class="history-tabs">
-        <li class="history-tab" :class="{ select: selectTab == 0 }">
-          <p @click="selectTab = 0">1月~3月</p>
-        </li>
-        <li class="history-tab" :class="{ select: selectTab == 1 }">
-          <p @click="selectTab = 1">4月~6月</p>
-        </li>
-        <li class="history-tab" :class="{ select: selectTab == 2 }">
-          <p @click="selectTab = 2">7月~9月</p>
-        </li>
-        <li class="history-tab" :class="{ select: selectTab == 3 }">
-          <p @click="selectTab = 3">10月~12月</p>
-        </li>
-      </ul>
       <HistoryList :histories="getHistories(selectTab)" />
     </div>
   </section>
@@ -44,8 +44,8 @@ const getHistories = (select: number): HistoryItem[] => {
 }
 .inner-wrapper {
   max-width: 1380px;
-  padding-left: 1.5em;
-  padding-right: 1.5em;
+  padding-left: 2.5em;
+  padding-right: 2.5em;
   margin-left: auto;
   margin-right: auto;
 }
