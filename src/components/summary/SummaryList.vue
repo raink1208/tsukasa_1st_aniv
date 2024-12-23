@@ -45,8 +45,6 @@ const startAnimation = () => {
 }
 
 onMounted(() => {
-  console.log(totalTime);
-  startAnimation()
   addEventListener("scroll", startAnimation);
 });
 </script>
@@ -54,8 +52,8 @@ onMounted(() => {
 <template>
   <div ref="rankingList">
     <h3 class="title text-center">{{title}}</h3>
-    <slot name="description"></slot>
     <p class="time text-center">{{toHMSTime(displayTime)}}</p>
+    <slot name="description"></slot>
     <div class="grid grid-nogutter" data-anim-slide="delayBottomIn" ref="delayFadeIn">
       <div v-for="streamInfo in data.slice(0, 5)" v-bind:key="streamInfo.id">
         <SummaryListItem :streamInfo="streamInfo" :select="select" />

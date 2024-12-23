@@ -32,14 +32,13 @@ const vlogImages = [
         <img data-anim-slide="bottomIn" alt="魅力 Charm" src="" />
       </h2>
       <div class="point">
-        <h3 class="title fade-in" data-anim-slide="bottomIn">ホラーゲーム</h3>
+        <h3 class="title fade-in" data-anim-slide="bottomIn"><span>ホラーゲームといえば</span><span>領国つかさ</span></h3>
         <div class="intro">
           <div class="intro-text">
             <p class="fade-in" data-anim-slide="leftIn">
-              <b>「ホラーゲームといえば領国つかさ」</b><br>
               デビューから1年で 50タイトル以上 200時間越えと数多くのホラゲー配信をしてきた彼女。<br>
-              暗闇とジャンプスケアが苦手であり、強がりながらも可愛らしいリアクションやガチの悲鳴で領国民達を魅了しています。
-              恐怖感を楽しむだけではなく、考察しながら進めたり推理することでストーリーの真相に迫っていく姿は真のホラゲー好きと言えます。<br>
+              暗闇とジャンプスケアが苦手であり、強がりながらも思わず漏れてしまう可愛らしいリアクションや、ガチの悲鳴が彼女の魅力の一つです。
+              恐怖感を楽しむだけではなく、ホラーゲームのストーリーや設定に深く入り込み、シナリオを考察しながら進める姿勢は、真のホラーゲーム好きとしての一面を見せてくれます。<br>
               ホラーが苦手な領国民でも閣下のかわいいリアクションを楽しむことで恐怖心を和らげ、ストーリーを理解しつつ配信を楽しむことができるでしょう。
             </p>
           </div>
@@ -60,6 +59,7 @@ const vlogImages = [
           </div>
           <div class="intro-text">
             <p class="fade-in" data-anim-slide="rightIn">
+
             </p>
           </div>
         </div>
@@ -79,21 +79,39 @@ const vlogImages = [
           </div>
         </div>
       </div>
+      <div class="point">
+        <h3 class="title fade-in" data-anim-slide="bottomIn">3Dお披露目</h3>
+        <div class="intro">
+          <div class="intro-image">
+            <div class="image-wrapper">
+              <ImageSwiperSlide :images="vlogImages" />
+            </div>
+          </div>
+          <div class="intro-text">
+            <p class="fade-in" data-anim-slide="rightIn">
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <style scoped>
 h3 {
-  font-size: 50px;
+  font-size: clamp(25px, 5vw, 40px);
   font-weight: bold;
   font-family: var(--font-round), cursive;
+}
+
+h3 span {
+  display: inline-block;
 }
 
 .inner-wrapper {
   margin: 0 auto;
   padding: 0 4em;
-  max-width: 1580px;
+  max-width: 1480px;
 }
 
 .title {
@@ -106,16 +124,16 @@ h3 {
 }
 
 .intro-text {
-  width: 45%;
+  width: 40%;
   padding-top: 30px;
 }
 
 .intro-text p {
-  font-size: 19px;
+  font-size: 18px;
 }
 
 .intro-image {
-  width: 50%;
+  width: 55%;
 }
 
 @media screen and (max-width: 1050px) {
@@ -128,6 +146,10 @@ h3 {
     width: revert;
   }
 
+  .intro-text {
+    padding-top: 10px;
+  }
+
   .intro-image {
     width: revert;
   }
@@ -136,6 +158,14 @@ h3 {
 @media screen and (max-width: 768px) {
   .inner-wrapper {
     padding: 0 2em;
+  }
+
+  .title {
+    padding-left: 0px;
+  }
+
+  .intro-text p {
+    font-size: 16px;
   }
 }
 

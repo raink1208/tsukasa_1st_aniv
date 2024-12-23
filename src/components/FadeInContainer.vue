@@ -3,7 +3,6 @@ import { onMounted, ref } from 'vue'
 
 const animationContainer = ref<Element | undefined>(undefined);
 onMounted(() => {
-  fadeIn();
   window.addEventListener("scroll", fadeIn);
   window.addEventListener("resize", fadeIn);
 });
