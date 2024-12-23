@@ -35,7 +35,7 @@ const vlogImages = [
         <h3 class="title fade-in" data-anim-slide="bottomIn"><span>ホラーゲームといえば</span><span>領国つかさ</span></h3>
         <div class="intro">
           <div class="intro-text">
-            <p class="fade-in" data-anim-slide="leftIn">
+            <p class="fade-in" data-anim-slide="rightIn">
               デビューから1年で 50タイトル以上 200時間越えと数多くのホラゲー配信をしてきた彼女。<br>
               暗闇とジャンプスケアが苦手であり、強がりながらも思わず漏れてしまう可愛らしいリアクションや、ガチの悲鳴が彼女の魅力の一つです。
               恐怖感を楽しむだけではなく、ホラーゲームのストーリーや設定に深く入り込み、シナリオを考察しながら進める姿勢は、真のホラーゲーム好きとしての一面を見せてくれます。<br>
@@ -44,7 +44,7 @@ const vlogImages = [
           </div>
           <div class="intro-image">
             <div class="image-wrapper">
-              <ImageSwiperSlide :images="horrorImages" />
+              <ImageSwiperSlide :images="horrorImages" class="fade-in" data-anim-slide="leftIn" />
             </div>
           </div>
         </div>
@@ -54,11 +54,11 @@ const vlogImages = [
         <div class="intro">
           <div class="intro-image">
             <div class="image-wrapper">
-              <ImageSwiperSlide :images="vlogImages" />
+              <ImageSwiperSlide :images="vlogImages" class="fade-in" data-anim-slide="rightIn" />
             </div>
           </div>
           <div class="intro-text">
-            <p class="fade-in" data-anim-slide="rightIn">
+            <p class="fade-in" data-anim-slide="leftIn">
 
             </p>
           </div>
@@ -68,13 +68,13 @@ const vlogImages = [
         <h3 class="title fade-in" data-anim-slide="bottomIn">無軌道雑談</h3>
         <div class="intro">
           <div class="intro-text">
-            <p class="fade-in" data-anim-slide="leftIn">
+            <p class="fade-in" data-anim-slide="rightIn">
               紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文
             </p>
           </div>
           <div class="intro-image">
             <div class="image-wrapper">
-              <ImageSwiperSlide :images="horrorImages" />
+              <ImageSwiperSlide :images="horrorImages" class="fade-in" data-anim-slide="leftIn" />
             </div>
           </div>
         </div>
@@ -84,11 +84,11 @@ const vlogImages = [
         <div class="intro">
           <div class="intro-image">
             <div class="image-wrapper">
-              <ImageSwiperSlide :images="vlogImages" />
+              <ImageSwiperSlide :images="vlogImages" class="fade-in" data-anim-slide="rightIn" />
             </div>
           </div>
           <div class="intro-text">
-            <p class="fade-in" data-anim-slide="rightIn">
+            <p class="fade-in" data-anim-slide="leftIn">
             </p>
           </div>
         </div>

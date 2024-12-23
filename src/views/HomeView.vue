@@ -6,14 +6,11 @@ import CharmPointArea from '@/components/charm/CharmPointArea.vue'
 import FirstViewArea from '@/components/firstView/FirstViewArea.vue'
 import SummaryArea from '@/components/summary/SummaryArea.vue'
 import LoadingTransition from '@/components/LoadingTransition.vue'
-import { onMounted, ref } from 'vue'
-
+import { ref } from 'vue'
 const loading = ref(true);
-onMounted(() => {
-  setTimeout(() => {
-    loading.value = false
-  }, 3000);
-});
+const hideLoading = () => {
+  loading.value = false;
+}
 </script>
 
 <template>
@@ -21,8 +18,8 @@ onMounted(() => {
     <LoadingTransition v-if="loading" />
   </Transition>
   <div v-show="!loading">
-    <FadeInContainer :ready="!loading">
-      <FirstViewArea />
+    <FadeInContainer>
+      <FirstViewArea @hideLoading="hideLoading" :loading="loading" />
       <ProfileArea />
       <CharmPointArea />
       <HistoryArea />
