@@ -3,12 +3,10 @@
 //@ts-nocheck
 import type { StreamInfo } from '@/models/StreamInfo'
 import { toHMSTime } from '@/utils/TimeUtil'
-
 const {streamInfo} = defineProps<{
   streamInfo: StreamInfo,
   select: string,
 }>();
-
 const openUrl = (url: string) => {
   window.open(url, '_blank')
 }
@@ -16,15 +14,15 @@ const openUrl = (url: string) => {
 
 <template>
   <div class="item-row border-t-2">
-    <div class="flex gap-5 w-full" @click="openUrl(streamInfo.url)">
-      <div class="flex-shrink-0">
+    <div class="item" @click="openUrl(streamInfo.url)">
+      <div class="thumbnail-column">
         <figure class="thumbnail rounded-xl">
           <img :src="streamInfo.thumbnail" alt="サムネイル">
         </figure>
       </div>
-      <div class="relative flex-grow">
+      <div class="content-column">
         <p>{{streamInfo.title}}</p>
-        <p class="absolute right-2 bottom-2">{{toHMSTime(streamInfo[select])}}</p>
+        <p class="time">{{toHMSTime(streamInfo[select])}}</p>
       </div>
     </div>
   </div>
@@ -34,21 +32,48 @@ const openUrl = (url: string) => {
 .item-row {
   padding: 5px 0;
 }
-
+.item {
+  display: flex;
+  gap: 5px;
+  width: 100%;
+}
 .thumbnail {
   height: 150px;
   aspect-ratio: 16/9;
   overflow: hidden;
 }
-
 .thumbnail img {
   aspect-ratio: 16 / 9;
   object-fit: cover;
   object-position: center center;
 }
-
 .item-row:hover img {
   transform: scale(1.05, 1.05);
   transition: .5s all;
+}
+.thumbnail-column {
+  flex-shrink: 0;
+}
+.content-column {
+  position: relative;
+  flex-grow: 1;
+}
+.time {
+  position: absolute;
+  right: 2px;
+  bottom: 2px;
+}
+@media screen and (max-width: 768px) {
+  .item {
+    display: revert;
+  }
+  .thumbnail {
+    height: auto;
+    width: 100%;
+  }
+  .time {
+    position: revert;
+    float: right;
+  }
 }
 </style>

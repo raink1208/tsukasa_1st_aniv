@@ -3,15 +3,12 @@ import streamData from  '@/assets/data/streamData.json';
 import type { StreamInfo } from '@/models/StreamInfo';
 import { onMounted, ref } from 'vue';
 import SummaryList from './SummaryList.vue';
-
 const streamTimeData = [...streamData].sort((a: StreamInfo, b: StreamInfo) => b.streamTime - a.streamTime);
 const totalStreamTime = ref(0);
-
 const lateTimeData = [...streamData].sort((a: StreamInfo, b: StreamInfo) => b.lateTime - a.lateTime);
 const totalLateTime = ref(0);
 const totalLateCount = ref(0);
 const totalStreamCount = ref(0);
-
 onMounted(() => {
   let streamTime = 0;
   let lateTime = 0;
@@ -27,7 +24,6 @@ onMounted(() => {
   streamData.forEach((it: StreamInfo) => {
     if (it.streamTime > 0) streamCount++;
   });
-
   totalStreamTime.value = streamTime;
   totalLateTime.value = lateTime;
   totalStreamCount.value = streamCount;
@@ -58,11 +54,17 @@ onMounted(() => {
 
 <style scoped>
 .inner-wrapper {
+  padding-top: 100px;
   max-width: 1280px;
   padding-left: 4em;
   padding-right: 4em;
-
   margin-left: auto;
   margin-right: auto;
+}
+@media screen and (max-width: 768px) {
+  .inner-wrapper {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
 }
 </style>

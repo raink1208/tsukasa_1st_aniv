@@ -89,6 +89,7 @@ const vlogImages = [
           </div>
           <div class="intro-text">
             <p class="fade-in" data-anim-slide="leftIn">
+              あの天才最強中学生が3D化！
             </p>
           </div>
         </div>
