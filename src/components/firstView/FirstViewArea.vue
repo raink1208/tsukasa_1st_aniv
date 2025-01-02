@@ -43,7 +43,7 @@ const isAnimated = ref(false);
 <template>
   <section id="firstView">
     <div class="background">
-      <video ref="videoRef" autoplay muted loop playsinline />
+      <video ref="videoRef" autoplay muted loop playsinline disablePictureInPicture />
     </div>
     <div class="bg-mask">
       <div class="center">
