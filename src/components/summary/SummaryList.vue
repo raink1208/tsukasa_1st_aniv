@@ -78,5 +78,7 @@ onMounted(() => {
 
 .description {
   text-align: right;
+  padding-right: 25px;
+  padding-bottom: 5px;
 }
 </style>
