@@ -61,6 +61,10 @@ onMounted(() => {
   margin-left: auto;
   margin-right: auto;
 }
+small {
+  font-size: 14px;
+}
+
 @media screen and (max-width: 768px) {
   .inner-wrapper {
     padding-left: 1em;

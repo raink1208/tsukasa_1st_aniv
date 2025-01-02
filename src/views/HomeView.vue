@@ -7,6 +7,7 @@ import FirstViewArea from '@/components/firstView/FirstViewArea.vue'
 import SummaryArea from '@/components/summary/SummaryArea.vue'
 import LoadingTransition from '@/components/LoadingTransition.vue'
 import { ref } from 'vue'
+import FooterArea from '@/components/footer/FooterArea.vue'
 const loading = ref(true);
 const hideLoading = () => {
   loading.value = false;
@@ -25,6 +26,7 @@ const hideLoading = () => {
       <HistoryArea />
       <SummaryArea />
     </FadeInContainer>
+    <FooterArea />
   </div>
 </template>
 

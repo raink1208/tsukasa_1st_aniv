@@ -2,14 +2,11 @@
 import ImageSwiperSlide from '@/components/ImageSwiperSlide.vue'
 
 const horrorImages = [
-  "https://1staniv-cdn.tsukasa-kingdom.net/profile_slide/first_stream_face.webp",
-  "https://1staniv-cdn.tsukasa-kingdom.net/profile_slide/first_stream_charm.webp",
-  "https://1staniv-cdn.tsukasa-kingdom.net/profile_slide/first_stream_guruguru.webp",
-  "https://1staniv-cdn.tsukasa-kingdom.net/profile_slide/school_outfit_face.webp",
-  "https://1staniv-cdn.tsukasa-kingdom.net/profile_slide/school_outfit_smile.webp",
-  "https://1staniv-cdn.tsukasa-kingdom.net/profile_slide/3D_hypnosis.webp",
-  "https://1staniv-cdn.tsukasa-kingdom.net/profile_slide/3D_chair.webp",
-  "https://1staniv-cdn.tsukasa-kingdom.net/profile_slide/3D_weapon.webp",
+  "https://1staniv-cdn.tsukasa-kingdom.net/horror_slide/1.webp",
+  "https://1staniv-cdn.tsukasa-kingdom.net/horror_slide/2.webp",
+  "https://1staniv-cdn.tsukasa-kingdom.net/horror_slide/3.webp",
+  "https://1staniv-cdn.tsukasa-kingdom.net/horror_slide/4.webp",
+  "https://1staniv-cdn.tsukasa-kingdom.net/horror_slide/5.webm",
 ];
 
 const vlogImages = [
@@ -22,7 +19,11 @@ const vlogImages = [
   "https://1staniv-cdn.tsukasa-kingdom.net/vlog_slide/2_tororo.webp",
   "https://1staniv-cdn.tsukasa-kingdom.net/vlog_slide/2_zazenn.webp",
   "https://1staniv-cdn.tsukasa-kingdom.net/vlog_slide/2_ecchi.webp",
-]
+];
+
+const _3DImages = [
+  "https://1staniv-cdn.tsukasa-kingdom.net/3D_slide/3D_hypnosis.webm",
+];
 </script>
 
 <template>
@@ -80,11 +81,11 @@ const vlogImages = [
         </div>
       </div>
       <div class="point">
-        <h3 class="title fade-in" data-anim-slide="bottomIn">3Dお披露目</h3>
+        <h3 class="title fade-in" data-anim-slide="bottomIn">あの天才最強中学生が3D化！</h3>
         <div class="intro">
           <div class="intro-image">
             <div class="image-wrapper">
-              <ImageSwiperSlide :images="vlogImages" class="fade-in" data-anim-slide="rightIn" />
+              <ImageSwiperSlide :images="_3DImages" class="fade-in" data-anim-slide="rightIn" />
             </div>
           </div>
           <div class="intro-text">

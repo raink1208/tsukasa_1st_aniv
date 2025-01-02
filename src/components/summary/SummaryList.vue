@@ -39,7 +39,6 @@ const startAnimation = () => {
       displayTime.value = totalTime;
       delayFadeIn.value?.classList.add("is-view");
     }
-    console.log(displayTime.value)
   };
   animationFrameId = requestAnimationFrame(animate);
 }

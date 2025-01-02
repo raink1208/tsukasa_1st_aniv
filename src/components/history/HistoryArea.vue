@@ -56,12 +56,17 @@ const getHistories = (select: number): HistoryItem[] => {
   z-index: 10;
   overflow: auto;
   padding-bottom: 70px;
+  scrollbar-width: none
 }
 .history-tabs {
   display: flex;
   padding-top: 70px;
   justify-content: center;
+  min-width: 500px;
   gap: 1em;
+}
+.history-tabs::-webkit-scrollbar {
+  display: none;
 }
 .history-tabs .history-tab a {
   position: relative;
@@ -101,5 +106,12 @@ const getHistories = (select: number): HistoryItem[] => {
   opacity: 1;
 }
 @media screen and (max-width: 768px) {
+  .inner-wrapper {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .history-tabs .history-tab a {
+    width: 100px;
+  }
 }
 </style>
