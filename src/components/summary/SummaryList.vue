@@ -49,10 +49,12 @@ onMounted(() => {
 </script>
 
 <template>
-  <div ref="rankingList">
+  <div class="summary-list" ref="rankingList">
     <h3 class="title text-center">{{title}}</h3>
     <p class="time text-center">{{toHMSTime(displayTime)}}</p>
-    <slot name="description"></slot>
+    <div class="description">
+      <slot name="description"></slot>
+    </div>
     <div class="grid grid-nogutter" data-anim-slide="delayBottomIn" ref="delayFadeIn">
       <div v-for="streamInfo in data.slice(0, 5)" v-bind:key="streamInfo.id">
         <SummaryListItem :streamInfo="streamInfo" :select="select" />
@@ -62,11 +64,19 @@ onMounted(() => {
 </template>
 
 <style scoped>
+.summary-list {
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
 .title {
   font-size: 25px;
 }
 
 .time {
   font-size: 30px
+}
+
+.description {
+  text-align: right;
 }
 </style>

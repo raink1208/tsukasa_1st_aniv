@@ -6,7 +6,6 @@
   <footer>
     <h2>領国つかさ 非公式ファンサイト</h2>
     <small>tsukasa-kingdom.net</small>
-
     <p>
       このサイトは、すぺしゃりて所属のVtuber 領国つかささんを応援する非公式のファンサイトです<br>
       当サイトで使⽤している画像の著作権・肖像権等は各権利者に帰属いたします。
@@ -17,7 +16,6 @@
 <style scoped>
 footer {
   background-color: var(--theme-color);
-  margin-top: 80px;
   padding-top: 30px;
   padding-bottom: 30px;
   text-align: center;
