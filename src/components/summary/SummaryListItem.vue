@@ -8,10 +8,9 @@ const { streamInfo } = defineProps<{
   select: string,
 }>();
 </script>
-
 <template>
-  <div class="item-row border-t-2">
-    <a :href="streamInfo.url" target="_blank">
+  <a :href="streamInfo.url" target="_blank">
+    <div class="item-row border-t-2">
       <div class="item">
         <div class="thumbnail-column">
           <figure class="thumbnail rounded-xl">
@@ -23,8 +22,8 @@ const { streamInfo } = defineProps<{
           <p class="time">{{ toHMSTime(streamInfo[select]) }}</p>
         </div>
       </div>
-    </a>
-  </div>
+    </div>
+  </a>
 </template>
 
 <style scoped>
