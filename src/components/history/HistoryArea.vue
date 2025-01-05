@@ -105,6 +105,10 @@ const getHistories = (select: number): HistoryItem[] => {
 .history-tabs .history-tab.select a::before {
   opacity: 1;
 }
+
+.history-tabs .history-tab a:hover {
+  background-color: var(--theme-color);
+}
 @media screen and (max-width: 768px) {
   .inner-wrapper {
     padding-left: 1rem;
