@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import ImageSwiperSlide from '@/components/ImageSwiperSlide.vue'
+import { onBeforeUnmount, onMounted, ref } from 'vue'
+import Hls from 'hls.js'
 
 const horrorImages = [
   "https://1staniv-cdn.tsukasa-kingdom.net/horror_slide/1.webp",
@@ -21,9 +23,36 @@ const vlogImages = [
   "https://1staniv-cdn.tsukasa-kingdom.net/vlog_slide/2_ecchi.webp",
 ];
 
-const _3DImages = [
-  "https://1staniv-cdn.tsukasa-kingdom.net/3D_slide/3D_hypnosis.webm",
-];
+let hls: Hls | null = null;
+const playlistURL = "https://1staniv-cdn.tsukasa-kingdom.net/3D_slide_hls/3D_slide_video.m3u8";
+const videoRef = ref<HTMLVideoElement | null>(null);
+
+onMounted(() => {
+  const video = videoRef.value;
+  if (!video) return;
+
+  video.addEventListener("canplay", () => {
+    video.play().catch((error) => {
+      console.error("Error playing video:", error);
+    });
+  });
+
+  if (Hls.isSupported()) {
+    hls = new Hls();
+    hls.loadSource(playlistURL)
+    hls.attachMedia(video);
+  } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
+    video.src = playlist3D;
+  }
+})
+
+onBeforeUnmount(() => {
+  if (hls) {
+    hls.destroy();
+    hls = null;
+  }
+});
+
 </script>
 
 <template>
@@ -85,7 +114,7 @@ const _3DImages = [
         <div class="intro">
           <div class="intro-image">
             <div class="image-wrapper">
-              <ImageSwiperSlide :images="_3DImages" class="fade-in" data-anim-slide="rightIn" />
+              <video ref="videoRef" class="fade-in" data-anim-slide="bottomIn" autoplay muted loop playsinline disablePictureInPicture />
             </div>
           </div>
           <div class="intro-text">
@@ -95,7 +124,7 @@ const _3DImages = [
               終始楽しそうに動き回るつかさちゃんの姿から目が離せませんでした！<br>
 
               ライブパートでは、かっこよさとかわいさがぎゅっと詰まった歌声と振り付けが披露されました。
-              事前にコールを募集した「サインはB」、オタク達の声が入っておりライブ感の増した演出になっています。<br><br>
+              事前にコールを募集した「サインはB」、オタク達の声が入っておりライブ感の増した演出になっています。<br>
               3Dのすがたを手に入れ事で活動の幅が広がった領国つかさの配信が楽しみです。
             </p>
           </div>
@@ -141,6 +170,15 @@ h3 span {
 
 .intro-image {
   width: 55%;
+}
+
+video {
+  width: 100%;
+  aspect-ratio: 16/9;
+  margin-top: 30px;
+
+  background-color: gray;
+  border-radius: 16px;
 }
 
 @media screen and (max-width: 1050px) {
