@@ -42,7 +42,7 @@ onMounted(() => {
     hls.loadSource(playlistURL)
     hls.attachMedia(video);
   } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
-    video.src = playlist3D;
+    video.src = playlistURL;
   }
 })
 
@@ -179,6 +179,11 @@ video {
 
   background-color: gray;
   border-radius: 16px;
+}
+
+a {
+  color: revert;
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 1050px) {
