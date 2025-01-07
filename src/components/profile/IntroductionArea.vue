@@ -32,19 +32,23 @@
             <dt>パパ (live2Dモデラー)</dt>
             <dd>星宮みづき様 <a href="https://twitter.com/Hoshi7Mizuki" target="_blank" class="link">@Hoshi7Mizuki</a></dd>
           </dl>
+          <dl>
+            <dt>ファンネーム</dt>
+            <dd>領国民</dd>
+          </dl>
+          <dl>
+            <dt>メンバーシップネーム</dt>
+            <dd>オタク</dd>
+          </dl>
+          <dl>
+            <dt>ファンマーク</dt>
+            <dd>🎖️(勲章)</dd>
+          </dl>
         </div>
         <div class="stream-info fade-in" data-anim-slide="leftIn">
           <dl>
             <dt>初配信日</dt>
             <dd>2024年 1月13日</dd>
-          </dl>
-          <dl>
-            <dt>ファンネーム / メンバーシップネーム</dt>
-            <dd>領国民 / オタク</dd>
-          </dl>
-          <dl>
-            <dt>ファンマーク</dt>
-            <dd>🎖️(勲章)</dd>
           </dl>
           <dl>
             <dt>好きなゲーム</dt>
