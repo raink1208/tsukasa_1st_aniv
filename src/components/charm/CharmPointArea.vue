@@ -95,30 +95,10 @@ onBeforeUnmount(() => {
         </div>
       </div>
       <div class="point">
-        <h3 class="title fade-in" data-anim-slide="bottomIn">無軌道雑談</h3>
+        <h3 class="title fade-in" data-anim-slide="bottomIn">あの天才最強中学生が3D化！</h3>
         <div class="intro">
           <div class="intro-text">
             <p class="fade-in" data-anim-slide="rightIn">
-              紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文紹介文
-            </p>
-          </div>
-          <div class="intro-image">
-            <div class="image-wrapper">
-              <ImageSwiperSlide :images="horrorImages" class="fade-in" data-anim-slide="leftIn" />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="point">
-        <h3 class="title fade-in" data-anim-slide="bottomIn">あの天才最強中学生が3D化！</h3>
-        <div class="intro">
-          <div class="intro-image">
-            <div class="image-wrapper">
-              <video ref="videoRef" class="fade-in" data-anim-slide="bottomIn" autoplay muted loop playsinline disablePictureInPicture />
-            </div>
-          </div>
-          <div class="intro-text">
-            <p class="fade-in" data-anim-slide="leftIn">
               待ちに待った3Dお披露目配信、メンバー限定で練習していた催眠術を披露したり、迫りくる壁を通り抜ける「脳カベゲーム」といった企画が盛りだくさん。
               さらに、お友達であるVEE所属の天籠りのんさん・安心院みささんにシチュエーションやポーズを指示してもらい、どちらがつかさちゃんの魅力をより引き出せるかを競う企画も。
               終始楽しそうに動き回るつかさちゃんの姿から目が離せませんでした！<br>
@@ -127,6 +107,11 @@ onBeforeUnmount(() => {
               事前にコールを募集した「サインはB」、オタク達の声が入っておりライブ感の増した演出になっています。<br>
               3Dのすがたを手に入れ事で活動の幅が広がった領国つかさの配信が楽しみです。
             </p>
+          </div>
+          <div class="intro-image">
+            <div class="image-wrapper">
+              <video ref="videoRef" class="fade-in" data-anim-slide="leftIn" autoplay muted loop playsinline disablePictureInPicture />
+            </div>
           </div>
         </div>
       </div>
