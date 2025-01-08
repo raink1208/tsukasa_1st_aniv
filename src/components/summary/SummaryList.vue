@@ -11,7 +11,7 @@ const {title, totalTime, data} = defineProps<{
   select: string
 }>();
 
-const animationDuration = 3000;
+const animationDuration = 2000;
 
 const rankingList = ref<Element | undefined>();
 const delayFadeIn = ref<Element | undefined>();

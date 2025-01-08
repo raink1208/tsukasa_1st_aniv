@@ -34,17 +34,17 @@ onMounted(() => {
 <template>
   <section>
     <div class="inner-wrapper">
-      <SummaryList title="年間配信時間合計" :totalTime="totalStreamTime" :data="streamTimeData" class="fade-in" data-anim-slide="bottomIn" select="streamTime">
+      <SummaryList title="配信時間合計" :totalTime="totalStreamTime" :data="streamTimeData" class="fade-in" data-anim-slide="bottomIn" select="streamTime">
         <template #description>
           <small>
             メン限を除く配信時間の合計 (配信数: {{totalStreamCount}})
           </small>
         </template>
       </SummaryList>
-      <SummaryList title="年間遅刻時間合計" :totalTime="totalLateTime" :data="lateTimeData" class="fade-in" data-anim-slide="bottomIn" select="lateTime">
+      <SummaryList title="遅刻時間合計" :totalTime="totalLateTime" :data="lateTimeData" class="fade-in" data-anim-slide="bottomIn" select="lateTime">
         <template #description>
           <small>
-            メン限を除く配信で 3分以上遅刻した合計の記録 (遅刻数: {{totalLateCount}})
+            3分以上遅刻した合計の記録 (遅刻数: {{totalLateCount}})
           </small>
         </template>
       </SummaryList>
