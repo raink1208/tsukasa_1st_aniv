@@ -56,10 +56,10 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <div id="charm">
+  <section id="charm">
     <div class="inner-wrapper">
       <h2>
-        <img data-anim-slide="bottomIn" alt="魅力 Charm" src="" />
+        <img class="fade-in title-logo" data-anim-slide="bottomIn" alt="おすすめ" src="@/assets/img/logo/charm_logo.webp" />
       </h2>
       <div class="point">
         <h3 class="title fade-in" data-anim-slide="bottomIn"><span>ホラーゲームといえば</span><span>領国つかさ</span></h3>
@@ -122,9 +122,18 @@ onBeforeUnmount(() => {
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 <style scoped>
+#charm {
+  padding-top: 30px;
+}
+
+.title-logo {
+  width: 400px;
+  margin: 0 auto;
+}
+
 h3 {
   font-size: clamp(25px, 5vw, 40px);
   font-weight: bold;
