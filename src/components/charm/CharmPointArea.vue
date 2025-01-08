@@ -89,7 +89,13 @@ onBeforeUnmount(() => {
           </div>
           <div class="intro-text">
             <p class="fade-in" data-anim-slide="leftIn">
+              普段はあまり外出しない領国つかさですが、VTuberのお友達とのお出かけや事務所での用事等で長期間お休みすることも。帰還後の雑談配信では、お出かけの話を楽しそうに語ります。<br>
+              VLogでは、どこでどんな体験をしたかがまとまっており、初めて領国つかさを知る人にもオススメです。
+              動画の最後には秋葉原に同人誌(教育本)を買いに行くという中学生らしからぬ煩悩にまみれたVLogですが、いつもの配信とは異なる一面を垣間見ることができるでしょう。<br>
 
+              また、雑談配信やVLogの公開後には、閣下が訪れた場所に聖地巡礼する領国民も...
+              もし近くに行く予定があれば、聖地巡礼を楽しむのも良いかもしれません。<br>
+              聖地巡礼マップは<a href="https://www.google.com/maps/d/u/0/edit?mid=1Pkg8-bBYahzxT-7O48CVfOBqEx3vcjA&usp=sharing">こちら</a> (非公式)
             </p>
           </div>
         </div>
@@ -150,7 +156,7 @@ h3 span {
 }
 
 .intro-text p {
-  font-size: 18px;
+  font-size: 17px;
 }
 
 .intro-image {
@@ -192,7 +198,7 @@ a {
 
 @media screen and (max-width: 768px) {
   .inner-wrapper {
-    padding: 0 2em;
+    padding: 0 1em;
   }
 
   .title {
