@@ -4,7 +4,7 @@
 
 <template>
   <footer>
-    <h2>領国つかさ 非公式ファンサイト</h2>
+    <h2>領国つかさ <span>非公式ファンサイト</span></h2>
     <small>tsukasa-kingdom.net</small>
     <p>
       このサイトは、すぺしゃりて所属のVTuber 領国つかささんを応援する非公式のファンサイトです<br>
@@ -23,6 +23,10 @@ footer {
 
 footer h2 {
   font-size: 2rem;
+}
+
+footer span {
+  display: inline-block;
 }
 
 footer p {
