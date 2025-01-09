@@ -13,10 +13,11 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
-	height: 5px;
-	width: 200px;
+	height: 10px;
+	width: 60vw;
 	background: #fff;
-	border: 1px solid #29d;
+	border: 1px solid #b92e46;
+	border-radius: 10px;
 
 	overflow: hidden;
 }
@@ -34,8 +35,7 @@
 	-o-transform: translate3d(0, 0, 0);
 	transform: translate3d(0, 0, 0);
 
-	max-width: 200px;
-	position: fixed;
+	max-width: 60vw;
 	z-index: 2000;
 	display: block;
 	position: absolute;
@@ -43,7 +43,7 @@
 	right: 100%;
 	height: 100%;
 	width: 100%;
-	background: #29d;
+	background: #b92e46;
 }
 
 .pace.pace-inactive {
