@@ -6,34 +6,13 @@ import CharmPointArea from '@/components/charm/CharmPointArea.vue'
 import FirstViewArea from '@/components/firstView/FirstViewArea.vue'
 import SummaryArea from '@/components/summary/SummaryArea.vue'
 import LoadingTransition from '@/components/LoadingTransition.vue'
-import { onBeforeMount, onMounted, ref } from 'vue'
+import { ref } from 'vue'
 import FooterArea from '@/components/footer/FooterArea.vue'
 const loading = ref(true);
 const hideLoading = () => {
   loading.value = false;
 }
-let observer: MutationObserver | null = null;
-onMounted(() => {
-  observer = new MutationObserver((mutationList) => {
-    mutationList.forEach((mutation) => {
-      if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
-        const bodyClasses = document.body.classList;
-        if (bodyClasses.contains('pace-done')) {
-          hideLoading();
-        }
-      }
-    })
-  });
-  observer.observe(document.body, {
-    attributes: true,
-    attributeFilter: ['class']
-  })
-});
-onBeforeMount(() => {
-  if (observer) {
-    observer.disconnect();
-  }
-});
+Pace.on('done', hideLoading);
 </script>
 
 <template>
