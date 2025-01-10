@@ -32,7 +32,8 @@ onBeforeUnmount(() => {
     hls = null;
   }
 });
-const message = '「領国つかさ、１周年おめでとう！」'
+const message = '領国つかさ、';
+const message2 = '１周年おめでとう！';
 const isAnimated = ref(false);
 </script>
 
@@ -50,6 +51,14 @@ const isAnimated = ref(false);
             v-for="(c, index) in message"
             :key="index"
             :style="{ transitionDelay: `${index * 0.05}s` }"
+          >
+            {{ c }}
+          </span>
+          <br>
+          <span
+            v-for="(c, index) in message2"
+            :key="index"
+            :style="{ transitionDelay: `${(message.length + index) * 0.05}s`}"
           >
             {{ c }}
           </span>
@@ -78,7 +87,6 @@ const isAnimated = ref(false);
   height: 100%;
   width: 100%;
 }
-
 .bg-layout {
   height: 100%;
   width: 100%;
@@ -88,9 +96,8 @@ const isAnimated = ref(false);
   height: 100%;
   object-fit: cover;
 }
-
 .center {
-  padding-top: 55vh;
+  padding-top: 51vh;
 }
 h1 span {
   display: inline-block;
@@ -100,8 +107,10 @@ h1 span {
   font-size: 2.5rem;
   font-weight: bold;
   color: #fff;
-
   font-family: var(--font-round), sans-serif;
+}
+.animate-message br {
+  display: none;
 }
 .animate-message span {
   display: inline-block;
@@ -114,5 +123,10 @@ h1 span {
   filter: blur(0px);
   transform: translate(0%, 0%) scale(1);
   transition: 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+@media screen and (max-width: 618px) {
+  .animate-message br {
+    display: revert;
+  }
 }
 </style>
