@@ -15,7 +15,7 @@ onMounted(() => {
   let streamCount = 0;
   let lateCount = 0;
   streamData.forEach((it: StreamInfo) => {
-    if (it.lateTime > 180) {
+    if (it.lateTime > 600) {
       lateTime += it.lateTime;
       lateCount++;
     }
@@ -44,7 +44,7 @@ onMounted(() => {
       <SummaryList title="遅刻時間合計" :totalTime="totalLateTime" :data="lateTimeData" class="fade-in" data-anim-slide="bottomIn" select="lateTime">
         <template #description>
           <small>
-            3分以上遅刻した合計の記録 (遅刻数: {{totalLateCount}})
+            10分以上遅刻した合計の記録 (遅刻数: {{totalLateCount}})
           </small>
         </template>
       </SummaryList>
