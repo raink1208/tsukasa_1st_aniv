@@ -95,7 +95,7 @@ onBeforeUnmount(() => {
 
               また、雑談配信やVLogの公開後には、閣下が訪れた場所に聖地巡礼する領国民も...
               もし近くに行く予定があれば、聖地巡礼を楽しむのも良いかもしれません。<br>
-              聖地巡礼マップは<a href="https://www.google.com/maps/d/u/0/edit?mid=1Pkg8-bBYahzxT-7O48CVfOBqEx3vcjA&usp=sharing">こちら</a> (非公式)
+              聖地巡礼マップは<a href="https://www.google.com/maps/d/u/0/viewer?mid=1Pkg8-bBYahzxT-7O48CVfOBqEx3vcjA&ll=35.09353236655371%2C138.39547985&z=9">こちら</a> (非公式)
             </p>
           </div>
         </div>
