@@ -150,6 +150,10 @@ h3 span {
   max-width: 1480px;
 }
 
+.point {
+  padding-top: 30px;
+}
+
 .title {
   padding-left: 20px;
 }
