@@ -46,7 +46,7 @@ const isAnimated = ref(false);
     </div>
     <div class="bg-mask">
       <div class="center">
-        <div :class="['animate-message', { animated: isAnimated }]">
+        <h1 :class="['animate-message', { animated: isAnimated }]">
           <span
             v-for="(c, index) in message"
             :key="index"
@@ -62,7 +62,7 @@ const isAnimated = ref(false);
           >
             {{ c }}
           </span>
-        </div>
+        </h1>
       </div>
     </div>
   </section>
